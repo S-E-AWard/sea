@@ -48,6 +48,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
     :root {
       --orange: #F5A623;
@@ -173,25 +176,29 @@
       color: var(--gold);
       font-weight: 700;
       font-size: .85rem;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      padding: 6px 18px;
+      padding: 8px 15px;
       border-radius: 2px;
       margin-bottom: 1.2rem;
+      max-width: 100%;
+      word-wrap: break-word;
+      white-space: normal;
+      line-height: 1.4;
     }
 
     .hero-name-small {
       font-weight: 600;
-      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-size: clamp(1rem, 3vw, 1.8rem);
       color: rgba(255, 255, 255, .85);
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       margin-bottom: .3rem;
     }
 
     .hero-name-big {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(4rem, 10vw, 9rem);
+      font-size: clamp(3.5rem, 10vw, 9rem);
       color: var(--white);
       line-height: .95;
       text-shadow: 4px 6px 0 rgba(0, 0, 0, .18);
@@ -203,12 +210,16 @@
       background: var(--navy);
       color: var(--white);
       font-weight: 700;
-      font-size: clamp(1rem, 2.5vw, 1.1rem);
-      letter-spacing: 2px;
+      font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      padding: 8px 20px;
+      padding: 10px 15px;
       border-left: 5px solid var(--gold);
       margin-bottom: 1.6rem;
+      max-width: 100%;
+      word-wrap: break-word;
+      white-space: normal;
+      line-height: 1.4;
     }
 
     .hero-tagline {
@@ -1085,6 +1096,7 @@
       gap: 5px;
       cursor: pointer;
     }
+
     .hamburger div {
       width: 25px;
       height: 3px;
@@ -1148,7 +1160,7 @@
         border-bottom: 3px solid var(--orange);
         gap: 0;
       }
-      
+
       .nav-links.open {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       }
@@ -1174,7 +1186,7 @@
       .sub-list {
         grid-template-columns: 1fr;
       }
-      
+
       .section-title {
         font-size: clamp(2rem, 8vw, 2.4rem);
       }
@@ -1184,22 +1196,27 @@
       .ward-stat-row {
         grid-template-columns: 1fr;
       }
+
       .hero-rings {
         width: 90vmin;
         height: 90vmin;
         right: -20%;
       }
+
       .embed-shell iframe {
         max-width: 100% !important;
         width: 100% !important;
       }
+
       .counter-grid {
         grid-template-columns: 1fr;
       }
+
       .socials-tabs {
         flex-direction: column;
         align-items: center;
       }
+
       .tab-btn {
         width: 100%;
         max-width: 250px;
@@ -1627,7 +1644,6 @@
       <div class="donate-card reveal">
         <div class="mpesa-logo">
           <span class="mpesa-badge">M-PESA</span>
-          <span class="mpesa-label">STK Push - instant and secure</span>
         </div>
         <h2>Support Brian Ondiso</h2>
         <p>Every shilling you contribute helps us reach more voters, print materials, and run community meetings across
@@ -1866,6 +1882,10 @@
       }
     }
   </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 
