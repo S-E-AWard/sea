@@ -52,17 +52,25 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
-    :root, [data-theme="dark"] {
+    :root,
+    [data-theme="dark"] {
       --orange: #F5A623;
       --deep-orange: #E8880A;
       --gold: #FFD060;
-      --navy: #1B2A6B;        /* Dark blue bg */
-      --navy-dark: #0F1A4A;   /* Very dark blue bg */
-      --white: #FFFFFF;       /* Text on navy */
-      --off-white: #0A122A;   /* Page bg for dark theme */
-      --text-dark: #F8FAFC;   /* Main text color */
-      --text-muted: #94A3B8;  /* Muted text color */
-      --card-bg: #111B3D;     /* Card background */
+      --navy: #1B2A6B;
+      /* Dark blue bg */
+      --navy-dark: #0F1A4A;
+      /* Very dark blue bg */
+      --white: #FFFFFF;
+      /* Text on navy */
+      --off-white: #0A122A;
+      /* Page bg for dark theme */
+      --text-dark: #F8FAFC;
+      /* Main text color */
+      --text-muted: #94A3B8;
+      /* Muted text color */
+      --card-bg: #111B3D;
+      /* Card background */
       --border-light: rgba(255, 255, 255, 0.15);
       --donate-grad-2: #070D26;
     }
@@ -84,12 +92,18 @@
     [data-theme="light"] {
       --orange: #F5A623;
       --deep-orange: #E8880A;
-      --gold: #D97706;        /* Darker gold for readability on light */
-      --navy: #E2E8F0;        /* Light gray-blue instead of navy */
-      --navy-dark: #F1F5F9;   /* Very light bg instead of navy-dark */
-      --white: #0F1A4A;       /* Text on --navy is now dark navy! */
-      --off-white: #FFFFFF;   /* Page bg */
-      --text-dark: #111827;   /* Text on page bg */
+      --gold: #D97706;
+      /* Darker gold for readability on light */
+      --navy: #E2E8F0;
+      /* Light gray-blue instead of navy */
+      --navy-dark: #F1F5F9;
+      /* Very light bg instead of navy-dark */
+      --white: #0F1A4A;
+      /* Text on --navy is now dark navy! */
+      --off-white: #FFFFFF;
+      /* Page bg */
+      --text-dark: #111827;
+      /* Text on page bg */
       --text-muted: #475569;
       --card-bg: #F8FAFC;
       --border-light: rgba(0, 0, 0, 0.15);
@@ -97,7 +111,9 @@
     }
 
     /* MODAL/OVERLAY BLUR EFFECT */
-    .modal-backdrop, .offcanvas-backdrop, .nav-overlay {
+    .modal-backdrop,
+    .offcanvas-backdrop,
+    .nav-overlay {
       backdrop-filter: blur(8px) !important;
       -webkit-backdrop-filter: blur(8px) !important;
       background-color: rgba(0, 0, 0, 0.4) !important;
@@ -511,7 +527,6 @@
 
     .agenda-card {
       background: var(--card-bg);
-      border-top: 5px solid var(--orange);
       padding: 28px 24px 24px;
       border-radius: 0 0 6px 6px;
       box-shadow: 0 4px 24px rgba(0, 0, 0, .06);
@@ -521,18 +536,6 @@
     .agenda-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 36px rgba(0, 0, 0, .12);
-    }
-
-    .agenda-card:nth-child(2) {
-      border-top-color: var(--navy);
-    }
-
-    .agenda-card:nth-child(3) {
-      border-top-color: #16A34A;
-    }
-
-    .agenda-card:nth-child(4) {
-      border-top-color: #6D28D9;
     }
 
     .agenda-card h3 {
@@ -896,7 +899,8 @@
     .pill.active {
       background: var(--orange);
       border-color: var(--orange);
-      color: #FFFFFF; /* always white on orange */
+      color: #FFFFFF;
+      /* always white on orange */
       opacity: 1;
     }
 
@@ -993,110 +997,58 @@
       padding: 80px 5vw;
     }
 
-    .socials-tabs {
+    .social-cards-wrapper {
       display: flex;
       justify-content: center;
-      gap: .5rem;
-      margin-bottom: 2.5rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
+      margin-top: 2rem;
     }
 
-    .tab-btn {
-      font-weight: 700;
-      font-size: .9rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 10px 28px;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all .2s;
-      background: var(--white);
-      color: var(--text-muted);
-      border: 2px solid #ddd;
-    }
-
-    .tab-btn:hover {
-      border-color: var(--orange);
-      color: var(--orange);
-    }
-
-    .tab-btn.active {
-      background: var(--navy);
-      color: var(--white);
-      border-color: var(--navy);
-    }
-
-    .tab-btn.fb.active {
-      background: #1877F2;
-      border-color: #1877F2;
-    }
-
-    .tab-btn.ig.active {
-      background: #C13584;
-      border-color: #C13584;
-    }
-
-    .tab-btn.tw.active {
-      background: #111;
-      border-color: #111;
-    }
-
-    .social-pane {
-      display: none;
-    }
-
-    .social-pane.active {
-      display: block;
-    }
-
-    .embed-shell {
-      max-width: 540px;
-      margin: 0 auto;
+    .social-card {
       background: var(--card-bg);
       border-radius: 12px;
+      padding: 24px;
       box-shadow: 0 4px 32px rgba(0, 0, 0, .09);
-      overflow: hidden;
-      min-height: 480px;
+      flex: 1;
+      min-width: 260px;
+      max-width: 320px;
+      text-align: left;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+      justify-content: space-between;
     }
 
-    .social-link-bar {
+    .sc-header {
       display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .sc-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      margin-top: 1.4rem;
-    }
-
-    .social-link-btn {
+      font-size: 1.3rem;
       font-weight: 700;
-      font-size: .9rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 10px 28px;
-      border-radius: 50px;
-      color: var(--white);
-      transition: opacity .2s, transform .15s;
-      display: inline-block;
+      font-family: 'Bebas Neue', sans-serif;
     }
 
-    .social-link-btn:hover {
-      opacity: .85;
-      transform: translateY(-2px);
+    .sc-info h3 {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      margin: 0;
     }
 
-    .social-link-btn.fb {
-      background: #1877F2;
-    }
-
-    .social-link-btn.ig {
-      background: #C13584;
-    }
-
-    .social-link-btn.tw {
-      background: #111;
+    .sc-info p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
     }
 
     /* FOOTER */
@@ -1170,9 +1122,11 @@
       transition: all 0.2s;
       margin-left: 1rem;
     }
+
     .theme-toggle:hover {
       background: rgba(255, 255, 255, 0.1);
     }
+
     .theme-toggle svg {
       width: 18px;
       height: 18px;
@@ -1286,16 +1240,6 @@
       .counter-grid {
         grid-template-columns: 1fr;
       }
-
-      .socials-tabs {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .tab-btn {
-        width: 100%;
-        max-width: 250px;
-      }
     }
   </style>
 </head>
@@ -1305,7 +1249,7 @@
   <!-- NAV -->
   <nav>
     <span class="nav-logo">ONDISO 2027</span>
-    
+
     <!-- Desktop Links -->
     <ul class="nav-links d-none d-md-flex">
       <li><a href="#agenda">Agenda</a></li>
@@ -1318,7 +1262,10 @@
     <div class="d-flex align-items-center">
       <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()" aria-label="Toggle Theme">
         <!-- Moon icon by default (will be toggled via JS) -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+        </svg>
       </button>
 
       <div class="hamburger ms-3 d-md-none" onclick="toggleNav()">
@@ -1327,7 +1274,7 @@
         <div></div>
       </div>
     </div>
-    
+
     <!-- Mobile Links -->
     <ul class="nav-links mobile-nav d-md-none">
       <li><a href="#agenda" onclick="toggleNav()">Agenda</a></li>
@@ -1338,7 +1285,9 @@
     </ul>
   </nav>
 
-  <div class="nav-overlay d-md-none" id="nav-overlay" onclick="toggleNav()" style="position:fixed; top:56px; left:0; width:100%; height:100%; z-index:90; opacity:0; visibility:hidden; transition:all 0.3s;"></div>
+  <div class="nav-overlay d-md-none" id="nav-overlay" onclick="toggleNav()"
+    style="position:fixed; top:56px; left:0; width:100%; height:100%; z-index:90; opacity:0; visibility:hidden; transition:all 0.3s;">
+  </div>
 
   <!-- HERO -->
   <section id="hero">
@@ -1787,57 +1736,48 @@
       <div class="section-divider"></div>
     </div>
 
-    <div class="socials-tabs reveal">
-      <button class="tab-btn fb active" onclick="switchTab('fb')">Facebook</button>
-      <button class="tab-btn ig" onclick="switchTab('ig')">Instagram</button>
-      <button class="tab-btn tw" onclick="switchTab('tw')">X (Twitter)</button>
-    </div>
-
-    <!-- FACEBOOK -->
-    <div class="social-pane active" id="pane-fb">
-      <div class="embed-shell">
-        <iframe
-          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Chj8EqQ2z%2F&tabs=timeline&width=540&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-          width="540" height="500" style="border:none;overflow:hidden;max-width:100%;" scrolling="yes" frameborder="0"
-          allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-        </iframe>
-      </div>
-      <div class="social-link-bar">
+    <div class="social-cards-wrapper reveal">
+      <!-- FACEBOOK -->
+      <div class="social-card fb">
+        <div class="sc-header">
+          <div class="sc-avatar" style="background:#1877F2;color:#FFF">BO</div>
+          <div class="sc-info">
+            <h3>Brian Ondiso</h3>
+            <p>Brian Ondiso Campaign</p>
+          </div>
+        </div>
         <a href="https://www.facebook.com/share/1Chj8EqQ2z/?mibextid=wwXIfr" target="_blank" rel="noopener"
-          class="social-link-btn fb">Open on Facebook</a>
+          class="btn-primary" style="background:#1877F2; width:100%; text-align:center; color:#FFF">Follow on
+          Facebook</a>
       </div>
-    </div>
 
-    <!-- INSTAGRAM -->
-    <div class="social-pane" id="pane-ig">
-      <div class="embed-shell"
-        style="min-height:520px; padding:24px; flex-direction:column; gap:16px; text-align:center;">
-        <p style="font-weight:600; font-size:.95rem; color:var(--text-muted); padding-top:16px;">
-          Instagram does not allow direct page embeds. Follow Brian on Instagram to see photos and campaign updates from
-          the ground.
-        </p>
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/brianhrh/"
-          data-instgrm-version="14"
-          style="background:#FFF; border:0; border-radius:8px; box-shadow:0 0 1px 0 rgba(0,0,0,.5),0 1px 10px 0 rgba(0,0,0,.15); margin:1px; max-width:480px; min-width:300px; padding:0; width:99.375%;">
-        </blockquote>
-        <script async src="https://www.instagram.com/embed.js"></script>
-      </div>
-      <div class="social-link-bar">
+      <!-- INSTAGRAM -->
+      <div class="social-card ig">
+        <div class="sc-header">
+          <div class="sc-avatar"
+            style="background:linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);color:#FFF">
+            BO</div>
+          <div class="sc-info">
+            <h3>Brian Ondiso</h3>
+            <p>@brianhrh</p>
+          </div>
+        </div>
         <a href="https://www.instagram.com/brianhrh?igsh=M3psOGFmOHJleDMy&utm_source=qr" target="_blank" rel="noopener"
-          class="social-link-btn ig">Open on Instagram</a>
+          class="btn-primary" style="background:#E1306C; width:100%; text-align:center; color:#FFF">Follow on
+          Instagram</a>
       </div>
-    </div>
 
-    <!-- X / TWITTER -->
-    <div class="social-pane" id="pane-tw">
-      <div class="embed-shell" style="min-height:520px;">
-        <a class="twitter-timeline" href="https://twitter.com/brian_hrh" data-width="540" data-height="520"
-          data-theme="light" data-chrome="noheader nofooter noborders">
-          Loading posts from X...
-        </a>
-      </div>
-      <div class="social-link-bar">
-        <a href="https://x.com/brian_hrh?s=21" target="_blank" rel="noopener" class="social-link-btn tw">Open on X</a>
+      <!-- X / TWITTER -->
+      <div class="social-card tw">
+        <div class="sc-header">
+          <div class="sc-avatar" style="background:#1DA1F2;color:#FFF">BO</div>
+          <div class="sc-info">
+            <h3>Brian Ondiso</h3>
+            <p>@brian_hrh</p>
+          </div>
+        </div>
+        <a href="https://x.com/brian_hrh?s=21" target="_blank" rel="noopener" class="btn-primary"
+          style="background:#1DA1F2; width:100%; text-align:center; color:#FFF">Follow on X</a>
       </div>
     </div>
   </section>
@@ -1961,15 +1901,6 @@
       this.value = v.slice(0, 10);
     });
 
-    /* SOCIAL TABS */
-    function switchTab(id) {
-      document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
-      document.querySelectorAll('.social-pane').forEach(function (p) { p.classList.remove('active'); });
-      document.querySelector('.tab-btn.' + id).classList.add('active');
-      document.getElementById('pane-' + id).classList.add('active');
-      if (id === 'tw' && window.twttr && window.twttr.widgets) { window.twttr.widgets.load(); }
-    }
-
     /* MOBILE NAV */
     function toggleNav() {
       const nav = document.querySelector('.mobile-nav');
@@ -2036,7 +1967,7 @@
         btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>';
       }
     }
-    
+
     // Initialize theme on load
     initTheme();
   </script>
